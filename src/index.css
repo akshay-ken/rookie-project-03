@@ -1,7 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
+
+@layer base {
+  body {
+    @apply font-one;
+  }
+}
 
 @theme {
   --color-Blue-50: hsl(240, 78%, 98%);
   --color-Gray-650: hsl(233, 13%, 49%);
   --color-Gray-700: hsl(232, 13%, 33%);
+  --font-one: Montserrat;
 }
