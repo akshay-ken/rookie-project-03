@@ -3,7 +3,7 @@
 
 @layer base {
   body {
-    @apply font-one;
+    @apply font-one bg-Blue-50 bg-no-repeat bg-[url('./assets/images/bg-top.svg')] bg-top-right md:bg-[url('./assets/images/bg-top.svg'),_url('./assets/images/bg-bottom.svg')] md:bg-[position:top_right,_bottom_left];
   }
 }
 
