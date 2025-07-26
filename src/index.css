@@ -1,1 +1,7 @@
 @import "tailwindcss";
+
+@theme {
+  --color-Blue-50: hsl(240, 78%, 98%);
+  --color-Gray-650: hsl(233, 13%, 49%);
+  --color-Gray-700: hsl(232, 13%, 33%);
+}
