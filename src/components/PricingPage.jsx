@@ -16,7 +16,27 @@ export function PricingPage() {
           <p className="font-bold text-Gray-650 text-lg ">Monthly</p>
         </div>
 
-        <PricingCard />
+        <PricingCard
+          planName={"Basic"}
+          plalnPrice={199.99}
+          feat1={"500 GB Storage"}
+          feat2={"2 Users Allowed"}
+          feat3={"Send up to 3 GB"}
+        />
+        <PricingCard
+          planName={"Professional"}
+          plalnPrice={249.99}
+          feat1={"1 TB Storage"}
+          feat2={"5 Users Allowed"}
+          feat3={"Send up to 10 GB"}
+        />
+        <PricingCard
+          planName={"Master"}
+          plalnPrice={399.99}
+          feat1={"2 TB Storage"}
+          feat2={"10 Users Allowed"}
+          feat3={"Send up to 20 GB"}
+        />
       </div>
     </main>
   );
