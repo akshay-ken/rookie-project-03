@@ -7,6 +7,12 @@
   }
 }
 
+@layer utilities {
+  .bg-custom-gradient {
+    @apply bg-gradient-to-r from-[hsl(237,73%,79%)] to-[hsl(238,63%,64%)];
+  }
+}
+
 @theme {
   --color-Blue-50: hsl(240, 78%, 98%);
   --color-Gray-650: hsl(233, 13%, 49%);

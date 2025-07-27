@@ -1,3 +1,5 @@
+import { PricingCard } from "./PricingCard";
+
 export function PricingPage() {
   return (
     <main className="w-full h-screen flex ">
@@ -13,6 +15,8 @@ export function PricingPage() {
           </label>
           <p className="font-bold text-Gray-650 text-lg ">Monthly</p>
         </div>
+
+        <PricingCard />
       </div>
     </main>
   );
