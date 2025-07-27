@@ -18,7 +18,7 @@ export function PricingCard({
   return (
     <>
       <div
-        className={`rounded-xl mx-auto bg-white min-w-sm flex flex-col items-center p-6 ${featuredBg}`}
+        className={`rounded-xl mx-auto bg-white w-sm flex flex-col items-center p-6 ${featuredBg}`}
       >
         <p className={`text-2xl mb-6 text-Gray-650 font-bold ${featuredText}`}>
           {planName}

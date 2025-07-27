@@ -2,10 +2,7 @@ import { useState } from "react";
 import { PricingCard } from "./PricingCard";
 
 export function PricingPage() {
-  //   const [selected, setSelected] = useState(false);
-  //   function handleSelecet() {
-  //     setSelected((prevState) => !prevState);
-  //   }
+  const [priceType, setPriceType] = useState(true);
   const [selected, setSelected] = useState(0);
   function handleSelect(planName) {
     setSelected(planName);
@@ -18,8 +15,13 @@ export function PricingPage() {
         </h1>
         <div className="flex flex-row my-4 gap-x-6 items-center justify-center">
           <p className="font-bold text-Gray-650 text-lg ">Annually</p>
-          <label className="inline-block cursor-pointer ">
-            <input type="checkbox" className="peer sr-only" />
+          <label className="inline-block cursor-pointer">
+            <input
+              type="checkbox"
+              className="peer sr-only"
+              checked={priceType}
+              onChange={() => setPriceType((prevState) => !prevState)}
+            />
             <div className="relative w-14 h-8 bg-sky-400 rounded-full peer-checked:before:translate-x-full   before:absolute before:top-[4px] before:start-[4px] before:bg-white before:rounded-full before:h-6 before:w-6 before:transition-transform peer-checked:bg-sky-400"></div>
           </label>
           <p className="font-bold text-Gray-650 text-lg ">Monthly</p>
@@ -27,7 +29,7 @@ export function PricingPage() {
 
         <PricingCard
           planName={"Basic"}
-          plalnPrice={199.99}
+          plalnPrice={priceType ? 19.99 : 199.99}
           feat1={"500 GB Storage"}
           feat2={"2 Users Allowed"}
           feat3={"Send up to 3 GB"}
@@ -36,7 +38,7 @@ export function PricingPage() {
         />
         <PricingCard
           planName={"Professional"}
-          plalnPrice={249.99}
+          plalnPrice={priceType ? 24.99 : 249.99}
           feat1={"1 TB Storage"}
           feat2={"5 Users Allowed"}
           feat3={"Send up to 10 GB"}
@@ -45,7 +47,7 @@ export function PricingPage() {
         />
         <PricingCard
           planName={"Master"}
-          plalnPrice={399.99}
+          plalnPrice={priceType ? 39.99 : 399.99}
           feat1={"2 TB Storage"}
           feat2={"10 Users Allowed"}
           feat3={"Send up to 20 GB"}
