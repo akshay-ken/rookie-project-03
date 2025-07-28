@@ -27,33 +27,35 @@ export function PricingPage() {
           <p className="font-bold text-Gray-650 text-lg ">Monthly</p>
         </div>
 
-        <PricingCard
-          planName={"Basic"}
-          plalnPrice={priceType ? 19.99 : 199.99}
-          feat1={"500 GB Storage"}
-          feat2={"2 Users Allowed"}
-          feat3={"Send up to 3 GB"}
-          currentCard={selected === 1}
-          handleSelect={() => handleSelect(1)}
-        />
-        <PricingCard
-          planName={"Professional"}
-          plalnPrice={priceType ? 24.99 : 249.99}
-          feat1={"1 TB Storage"}
-          feat2={"5 Users Allowed"}
-          feat3={"Send up to 10 GB"}
-          currentCard={selected === 2}
-          handleSelect={() => handleSelect(2)}
-        />
-        <PricingCard
-          planName={"Master"}
-          plalnPrice={priceType ? 39.99 : 399.99}
-          feat1={"2 TB Storage"}
-          feat2={"10 Users Allowed"}
-          feat3={"Send up to 20 GB"}
-          currentCard={selected === 3}
-          handleSelect={() => handleSelect(3)}
-        />
+        <div className="md:flex md:flex-row">
+          <PricingCard
+            planName={"Basic"}
+            plalnPrice={priceType ? 19.99 : 199.99}
+            feat1={"500 GB Storage"}
+            feat2={"2 Users Allowed"}
+            feat3={"Send up to 3 GB"}
+            currentCard={selected === 1}
+            handleSelect={() => handleSelect(1)}
+          />
+          <PricingCard
+            planName={"Professional"}
+            plalnPrice={priceType ? 24.99 : 249.99}
+            feat1={"1 TB Storage"}
+            feat2={"5 Users Allowed"}
+            feat3={"Send up to 10 GB"}
+            currentCard={selected === 2}
+            handleSelect={() => handleSelect(2)}
+          />
+          <PricingCard
+            planName={"Master"}
+            plalnPrice={priceType ? 39.99 : 399.99}
+            feat1={"2 TB Storage"}
+            feat2={"10 Users Allowed"}
+            feat3={"Send up to 20 GB"}
+            currentCard={selected === 3}
+            handleSelect={() => handleSelect(3)}
+          />
+        </div>
       </div>
     </main>
   );
