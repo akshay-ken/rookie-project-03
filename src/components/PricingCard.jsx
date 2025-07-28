@@ -9,11 +9,14 @@ export function PricingCard({
   currentCard,
   handleSelect,
 }) {
-  const featuredBg = clsx({ "bg-custom-gradient": currentCard });
+  const featuredBg = clsx({
+    "bg-custom-gradient md:scale-105 md:mt-8": currentCard,
+  });
   const featuredText = clsx({ "text-white": currentCard });
   const featuredButton = clsx({
     "bg-white text-[hsl(238,63%,64%)]": currentCard,
-    "text-white bg-custom-gradient": !currentCard,
+    "text-white bg-custom-gradient md:hover:bg-none md:hover:bg-white md:hover:text-[hsl(238,63%,64%)] md:hover:outline-2 md:hover:outline-[hsl(238,63%,64%)]":
+      !currentCard,
   });
   return (
     <>
@@ -50,7 +53,7 @@ export function PricingCard({
 
         <button
           onClick={handleSelect}
-          className={`w-full rounded-lg text-lg font-semibold tracking-widest uppercase text-center py-4
+          className={`w-full rounded-lg text-lg font-semibold  tracking-widest uppercase text-center py-4
               ${featuredButton}`}
         >
           Learn More
